@@ -1,0 +1,7 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+healthcheckPath = "/pluxo-ok"
+healthcheckTimeout = 100
+restartPolicyType = "ON_FAILURE"
