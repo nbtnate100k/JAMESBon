@@ -1,0 +1,8 @@
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "gunicorn pluxo_backend:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 120"
+healthcheckPath = "/pluxo-ok"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
